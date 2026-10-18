@@ -4,6 +4,6 @@ __pycache__/
 *.pyc
 _to_delete/
 venv
-
+.vscode/settings.json
 
 
