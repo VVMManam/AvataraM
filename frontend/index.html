@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manam Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari&family=Noto+Sans+Telugu&family=Noto+Sans+Tamil&family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js/+esm",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+        "talkinghead": "./vendor/talkinghead/talkinghead.mjs"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@1.51.0/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+</head>
+<body>
+  <main class="app">
+    <section class="stage">
+      <div id="avatar" class="avatar"></div>
+      <div id="loading" class="loading">Loading avatar…</div>
+      <div class="persona-card">
+        <div class="persona-name" id="personaName">—</div>
+        <div class="persona-lang" id="personaLang">—</div>
+      </div>
+      <div id="caption" class="caption" hidden></div>
+    </section>
+
+    <aside class="panel">
+      <header class="brand">
+        <div class="logo">M</div>
+        <div>
+          <div class="brand-title" id="companyName">Manam Technologies</div>
+          <div class="brand-sub" id="kbInfo">AI assistant</div>
+        </div>
+      </header>
+
+      <div class="controls">
+        <label class="field">
+          <span>Language</span>
+          <select id="langSelect"></select>
+        </label>
+        <div class="field">
+          <span>Avatar</span>
+          <div class="seg" role="group" aria-label="Avatar gender">
+            <button data-gender="F" class="seg-btn">Girl</button>
+            <button data-gender="M" class="seg-btn">Boy</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="log" class="log" aria-live="polite">
+        <div class="hint">Tap the microphone and ask anything about the company — in English, Hindi, Telugu or Arabic. The assistant switches to a matching persona automatically.</div>
+      </div>
+
+      <div class="status" id="status"></div>
+
+      <form id="askForm" class="ask">
+        <button type="button" id="micBtn" class="mic" aria-label="Speak">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/></svg>
+        </button>
+        <input id="textInput" type="text" placeholder="…or type a question" autocomplete="off">
+        <button type="submit" class="send">Send</button>
+      </form>
+    </aside>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

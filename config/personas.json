@@ -1,0 +1,242 @@
+{
+  "company": "Manam Technologies",
+  "website": "https://www.manamtechnologies.com",
+  "defaultLanguage": "en-IN",
+  "defaultGender": "F",
+  "_comment_stt": "Languages the microphone listens for. Azure auto-detect supports up to 4 here. Codes must match keys in 'languages'.",
+  "speechCandidates": [
+    "en-IN",
+    "hi-IN",
+    "te-IN",
+    "ar-AE"
+  ],
+  "avatars": {
+    "F": {
+      "url": "avatars/brunette.glb",
+      "body": "F",
+      "pitch": "+15%",
+      "child": {
+        "bones": {
+          "Spine2": 0.82,
+          "Head": 1.45,
+          "LeftEye": 1.12,
+          "RightEye": 1.12
+        },
+        "hide": [
+          "Wolf3D_Glasses"
+        ],
+        "skin": "#d9a47e",
+        "hair": "#2a1d16",
+        "parts": {
+          "top": [
+            "Wolf3D_Outfit_Top"
+          ],
+          "bottom": [
+            "Wolf3D_Outfit_Bottom"
+          ],
+          "shoes": [
+            "Wolf3D_Outfit_Footwear"
+          ],
+          "skin": [
+            "Wolf3D_Skin",
+            "Wolf3D_Body"
+          ],
+          "hair": [
+            "Wolf3D_Hair"
+          ]
+        }
+      }
+    },
+    "M": {
+      "url": "avatars/avatarsdk.glb",
+      "body": "M",
+      "retarget": {
+        "Neck": {
+          "z": -0.01,
+          "rx": -0.15
+        },
+        "Neck1": {
+          "z": -0.01,
+          "rx": -0.15
+        },
+        "Neck2": {
+          "z": -0.01,
+          "rx": -0.15
+        },
+        "LeftShoulder": {
+          "rz": -0.3
+        },
+        "RightShoulder": {
+          "rz": 0.3
+        },
+        "scaleToEyesLevel": 1.0,
+        "origin": {
+          "y": -0.1
+        }
+      },
+      "baseline": {
+        "headRotateX": -0.04,
+        "eyeBlinkLeft": 0.05,
+        "eyeBlinkRight": 0.05
+      },
+      "pitch": "+20%",
+      "child": {
+        "bones": {
+          "Spine2": 0.82,
+          "Head": 1.45,
+          "LeftEye": 1.12,
+          "RightEye": 1.12
+        },
+        "hide": [],
+        "skin": null,
+        "hair": null,
+        "parts": {
+          "top": [
+            "outfit_top"
+          ],
+          "bottom": [
+            "outfit_bottom"
+          ],
+          "shoes": [
+            "outfit_shoes"
+          ],
+          "skin": [
+            "AvatarHead",
+            "AvatarBody"
+          ],
+          "hair": []
+        }
+      }
+    }
+  },
+  "_comment_languages": "Each language has a male (M) and female (F) persona. 'voice' is an Azure Neural voice. Optional 'avatar' overrides the default model for that persona (e.g. 'avatars/priya.glb'). 'outfit' sets the kid avatar's clothing colours (top, bottom, shoes) for that language. Optional 'pitch' overrides the voice pitch.",
+  "languages": {
+    "en-IN": {
+      "label": "English",
+      "F": {
+        "name": "Ananya",
+        "voice": "en-IN-NeerjaNeural",
+        "outfit": {
+          "top": "#f4a7b9",
+          "bottom": "#fff3e0",
+          "shoes": "#e57373"
+        }
+      },
+      "M": {
+        "name": "Arjun",
+        "voice": "en-IN-PrabhatNeural",
+        "outfit": {
+          "top": "#f2ead8",
+          "bottom": "#4a6fa5",
+          "shoes": "#ffffff"
+        }
+      }
+    },
+    "hi-IN": {
+      "label": "हिन्दी (Hindi)",
+      "F": {
+        "name": "Priya",
+        "voice": "hi-IN-SwaraNeural",
+        "outfit": {
+          "top": "#ff9933",
+          "bottom": "#b71c1c",
+          "shoes": "#d4a017"
+        }
+      },
+      "M": {
+        "name": "Rahul",
+        "voice": "hi-IN-MadhurNeural",
+        "outfit": {
+          "top": "#ff9933",
+          "bottom": "#fdfdf5",
+          "shoes": "#8d5524"
+        }
+      }
+    },
+    "te-IN": {
+      "label": "తెలుగు (Telugu)",
+      "F": {
+        "name": "Lakshmi",
+        "voice": "te-IN-ShrutiNeural",
+        "outfit": {
+          "top": "#2e7d32",
+          "bottom": "#c2185b",
+          "shoes": "#d4a017"
+        }
+      },
+      "M": {
+        "name": "Ravi",
+        "voice": "te-IN-MohanNeural",
+        "outfit": {
+          "top": "#fffdf5",
+          "bottom": "#f5e6b8",
+          "shoes": "#8d5524"
+        }
+      }
+    },
+    "ta-IN": {
+      "label": "தமிழ் (Tamil)",
+      "F": {
+        "name": "Meena",
+        "voice": "ta-IN-PallaviNeural",
+        "outfit": {
+          "top": "#c62828",
+          "bottom": "#1b5e20",
+          "shoes": "#d4a017"
+        }
+      },
+      "M": {
+        "name": "Karthik",
+        "voice": "ta-IN-ValluvarNeural",
+        "outfit": {
+          "top": "#1565c0",
+          "bottom": "#fafafa",
+          "shoes": "#8d5524"
+        }
+      }
+    },
+    "ar-AE": {
+      "label": "العربية (Arabic)",
+      "F": {
+        "name": "Fatima",
+        "voice": "ar-AE-FatimaNeural",
+        "outfit": {
+          "top": "#ce93d8",
+          "bottom": "#f3e5f5",
+          "shoes": "#ffffff"
+        }
+      },
+      "M": {
+        "name": "Hamdan",
+        "voice": "ar-AE-HamdanNeural",
+        "outfit": {
+          "top": "#fafafa",
+          "bottom": "#fafafa",
+          "shoes": "#c8a27a"
+        }
+      }
+    },
+    "en-GB": {
+      "label": "English (UK)",
+      "F": {
+        "name": "Sophie",
+        "voice": "en-GB-MaisieNeural",
+        "outfit": {
+          "top": "#1f2a44",
+          "bottom": "#8e8e93",
+          "shoes": "#222222"
+        },
+        "pitch": "+0%"
+      },
+      "M": {
+        "name": "James",
+        "voice": "en-GB-RyanNeural",
+        "outfit": {
+          "top": "#1f2a44",
+          "bottom": "#8e8e93",
+          "shoes": "#222222"
+        }
+      }
+    }
+  }
+}
